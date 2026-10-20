@@ -16,12 +16,15 @@ def generate_palace(
     name: str,
     skin: str,
     output_dir: Path,
+    *,
     no_input: bool = False,
     overwrite: bool = False,
     extra_context: Optional[dict[str, Any]] = None,
 ) -> Path:
     """
     Generate a new OpenLoci palace using Cookiecutter.
+
+    Generation options must be passed by keyword to avoid mixing up boolean flags.
 
     Args:
         name:         Human-readable palace name (used in README, frontmatter).
